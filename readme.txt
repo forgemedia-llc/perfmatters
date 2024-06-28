@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
-Tested up to: 6.5.3
-Stable tag: 2.3.0
+Tested up to: 6.5.5
+Stable tag: 2.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,6 +34,22 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.3.1 - 06.27.2024 =
+* Added new Minify JS and Minify CSS features along with options to exclude specific files from minification and clear generated minified files when necessary.
+* UI Updates: What was previously the Assets tab has now been replaced by three more specific tabs, JavaScript, CSS, and Code. The main Script Manager toggle has been moved to Tools. Additional subheaders have also been added throughout to help with organization.
+* Added new perfmatters_minify_js filter.
+* Added new perfmatters_minify_js_exclusions filter.
+* Added new perfmatters_minify_css filter.
+* Added new perfmatters_minify_css_exclusions filter.
+* Added a REST API exception for Independent Analytics.
+* Added additional request parameter for Divi to excluded page builders array.
+* Added built-in critical image exclusion for WPML flag images.
+* Added Delay JS quick exclusion for Grow for WordPress.
+* Updated used CSS function to generate a separate file for each post type archive instead of a single shared stylesheet.
+* Fixed an issue that was causing an incorrect root directory to be returned for some environments.
+* Fixed an issue with preload and lazyload parent exclusion filters that was preventing them from excluding images correctly in some cases.
+* Translation updates.
 
 = 2.3.0 - 05.23.2024 =
 * Added a new function to verify the preferred content type from the HTTP header when determining if JSON is being requested. This should improve compatibility with certain hosting providers.
