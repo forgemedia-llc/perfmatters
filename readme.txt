@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
-Tested up to: 6.5.5
-Stable tag: 2.3.1
+Tested up to: 6.6.1
+Stable tag: 2.3.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,7 +21,6 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 * Disable scripts and plugins on a per post/page or sitewide basis with the Script Manager. 
 * Defer and delay JavaScript, including third-party scripts.
 * Automatically remove unused CSS.
-* Minify JavaScript and CSS.
 * Preload resources, critical images, and prefetch links for quicker load times.
 * Lazy load images and enable click-to-play thumbnails on videos.
 * Host Google Analytics and Google Fonts locally.
@@ -35,6 +34,23 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.3.2 - 07.30.2024 =
+* Updated CSS parsing library to the latest version (8.6.0) which should help with correctly parsing mathematical operations inside CSS property values.
+* Added additional parameter to excluded page builders array for GenerateBlocks and TranslatePress.
+* Added additional built-in deferral exclusion for jqueryParams inline script.
+* Added Delay JS quick exclusion for the Kadence menu.
+* Fixed a MU Mode issue where home page exceptions would not be applied correctly if a query string was present in the requested URL.
+* Fixed an undefined array key warning coming from the minify class.
+* Fixed a minify error that would show up when a prospective file did not have any content.
+* Fixed an issue where having Remove Unused CSS turned on with no stylesheets loading would return a blank screen.
+* Fixed a CSS error that would show up when trying to determine the current page ID when the queried post was null.
+* Fixed an issue where the CSS class would attempt to retrieve the contents of a stylesheet even if it didn't exist.
+* Fixed an issue where minified files would not get picked up by the CDN rewriter.
+* Removed unnecessary minify library .git directories from the plugin.
+* Minor style adjustments to the plugin UI.
+* Updated our staging site license key exception list with additional formats.
+* Translation updates.
 
 = 2.3.1 - 06.27.2024 =
 * Added new Minify JS and Minify CSS features along with options to exclude specific files from minification and clear generated minified files when necessary.
