@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
 Tested up to: 6.6.1
-Stable tag: 2.3.2
+Stable tag: 2.3.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,20 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.3.3 - 08.28.2024 =
+* Added new lazy loading advanced beta options to manage Lazy Elements which will allow for element chains in the DOM to be lazy loaded until they enter the viewport.
+* Separated out built-in CSS selector exclusions by URL type for increased performance on single and front pages.
+* Optimized plugin logo and other SVG image files.
+* Added fetchpriority high attribute automatically on critically preloaded image links.
+* Added support for delaying script modules.
+* Added additional jQuery sticky JavaScript file to Elementor quick exclusion.
+* Added new Delay JS quick exclusions for Fluent Forms and Fluent Forms Pro.
+* Integrated get_atts_array utility function into lazyload class to prevent redundancy.
+* Fixed an issue where smaller size files were sometimes not being replaced with the minified version for increased performance.
+* Fixed an issue where the preload location label was overlapping the input field for certain languages.
+* Made adjustments to option management to prevent autoloading of certain options going forward where it is not needed.
+* Removed various manual preload types that are no longer supported by most major browsers.
 
 = 2.3.2 - 07.30.2024 =
 * Updated CSS parsing library to the latest version (8.6.0) which should help with correctly parsing mathematical operations inside CSS property values.
