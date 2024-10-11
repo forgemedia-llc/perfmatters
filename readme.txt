@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
-Tested up to: 6.6.1
-Stable tag: 2.3.3
+Tested up to: 6.6.2
+Stable tag: 2.3.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,21 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.3.4 - 10.10.2024 =
+* Added new perfmatters_lazy_elements filter.
+* Added new perfmatters_is_woocommerce filter.
+* Added additional built-in stylesheet and selector exclusions for better compatibility with Elementor animations.
+* Added WP Rocket filter to disable lazy render when lazy elements feature is active to prevent conflicts.
+* Added additional parameter to excluded page builders array for tagDiv Composer.
+* Added built-in delay JS exclusion for lazy elements inline script.
+* Moved plugin settings logo SVG back to inline to prevent file_get_contents errors in certain environments.
+* Adjusted built-in CSS dynamic selector exclusions to fix some minor visual issues with a few page builders.
+* Fixed a JavaScript error that would sometimes show up in the console when using Delay JS with click delay enabled.
+* Fixed an issue where a used stylesheet path would still attempt to load even if no used styles had been picked up for the URL.
+* Fixed an issue where browser-specific stylesheets inside HTML comments were getting parsed by our used CSS library.
+* Fixed a MU Mode issue where exceptions would not be applied correctly if a query string was present on the home URL if set to show the latest posts.
+* Fixed an issue where preloading a JS file by the handle was not loading the minified version when necessary.
 
 = 2.3.3 - 08.28.2024 =
 * Added new lazy loading advanced beta options to manage Lazy Elements which will allow for element chains in the DOM to be lazy loaded until they enter the viewport.
