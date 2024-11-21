@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
-Tested up to: 6.6.2
-Stable tag: 2.3.4
+Tested up to: 6.7.1
+Stable tag: 2.3.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,19 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.3.5 - 11.21.2024 =
+* Added new local Google Font option to Limit Subsets that are downloaded and included in the stylesheet.
+* Added new local Google font option to change the Print Method with options for file and inline.
+* Added new Priority option to manual preloads which can be used to add a specific fetchpriority attribute value to individual preload tags.
+* Added new perfmatters_lazy_element_selectors filter.
+* Removed unnecessary trailing link tag from delayed stylesheets when using Remove Unused CSS.
+* Removed crossorigin option for manual preloads. The attribute is now automatically added to fetch and font preload tags.
+* Increased action button response message timeout to 10 seconds in plugin UI.
+* Fixed a PHP warning coming from Disable Google Maps function if a post ID was not found on a single post URL.
+* Fixed an issue with WordPress 6.7.1 where the text domain for translations was loading too early.
+* Removed deprecated plugin option to load Google fonts asynchronously.
+* Translation updates.
 
 = 2.3.4 - 10.10.2024 =
 * Added new perfmatters_lazy_elements filter.
