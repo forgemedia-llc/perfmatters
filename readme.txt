@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
 Tested up to: 6.7.1
-Stable tag: 2.3.5
+Stable tag: 2.3.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,9 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.3.6 - 11.21.2024 =
+* Fixed an issue where Delay JS wasn't running correctly in some cases.
 
 = 2.3.5 - 11.21.2024 =
 * Added new local Google Font option to Limit Subsets that are downloaded and included in the stylesheet.
