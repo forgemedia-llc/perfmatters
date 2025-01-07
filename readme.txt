@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
 Tested up to: 6.7.1
-Stable tag: 2.3.7
+Stable tag: 2.3.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,15 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.3.8 - 01.07.2025 =
+* Added a REST API exception for SureForms.
+* Added a UI button to cancel the current database optimization process.
+* Added built-in delay JS exclusion for document.write for compatibility.
+* Updated background processing library to the latest version (1.4.0).
+* Fixed an issue where some deliberate redirect requests were not being allowed to access the hidden login URL.
+* Fixed an issue where the database optimization process was not starting correctly in some cases.
+* Fixed a missing anchor link pointing to the license tab in our plugin settings UI.
 
 = 2.3.7 - 01.01.2025 =
 * Added additional CSS background image inline styles to account for backgrounds set on pseudo-elements of children inside the targeted container.
