@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
 Tested up to: 6.7.1
-Stable tag: 2.3.8
+Stable tag: 2.3.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,18 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.3.9 - 02.06.2025 =
+* Added new perfmatters_preloads_array filter.
+* Added new perfmatters_minify_threshold filter.
+* Added additional swiper JavaScript file to Elementor quick exclusion.
+* Added additional built-in CSS selector exclusion for WP Armour.
+* Added a string check to login URL filter function to prevent a possible PHP error.
+* Fixed an issue where new user email requests were not being allowed through the redirect block when using a custom login URL.
+* Minor adjustment to CDN rewrite regex to fix an issue that was happening when the home URL was different from the site URL.
+* Removed Ezoic quick exclusion and moved to built-in deferral and delay exclusions.
+* Updated our staging site license key exception list with additional formats.
+* Translation updates.
 
 = 2.3.8 - 01.07.2025 =
 * Added a REST API exception for SureForms.
