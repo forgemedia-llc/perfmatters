@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
-Tested up to: 6.7.1
-Stable tag: 2.3.9
+Tested up to: 6.7.2
+Stable tag: 2.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,21 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.4.0 - 02.26.2025 =
+* Added new perfmatters_rucss_async_stylesheets filter and built-in settings for dashicons and animation stylesheets which were already excluded from used CSS.
+* Added new perfmatters_after_local_analytics action hook.
+* Added additional logic to better handle stylesheets with media query attributes when including them in used CSS for increased performance. WooCommerce users may need to clear their used CSS if mobile-specific stylesheets are being loaded as they have been removed from our built-in exclusions.
+* Added new built-in stylesheet exclusion for Bricks post specific CSS.
+* Added new Delay JS quick exclusion for WPBakery.
+* Added a REST API exception for SureCart.
+* Added additional compatibility styles to the Script Manager.
+* Made some changes to be able to start our main output buffer a bit earlier in the load for better compatibility with other plugins that modify the HTML document.
+* Updated clean uninstall function with current post meta options.
+* Fixed an issue where the Clear Used CSS meta button was not working correctly for certain URL types.
+* Fixed a PHP warning coming from certain rewrite rule formats when MU Mode was turned on.
+* Removed BETA tag from preload lazy elements option.
+* Updated our staging site license key exception list with additional formats.
 
 = 2.3.9 - 02.06.2025 =
 * Added new perfmatters_preloads_array filter.
