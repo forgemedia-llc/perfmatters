@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
 Tested up to: 6.7.2
-Stable tag: 2.4.0
+Stable tag: 2.4.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,11 +36,24 @@ Check out our [documentation](https://perfmatters.io/docs/) for more information
 
 == Changelog ==
 
+= 2.4.1 - 03.26.2025 =
+* Refactored delay JS inline script, removed pageshow event listener, and uglified final code, reducing the script size by over 15%.
+* Added built-in JS deferral exclusion for Cloudflare Turnstile.
+* Added new delay JS quick exclusion for Plausible Analytics.
+* Updated delay JS quick exclusions for Fluent Forms and Kadence Blocks to be more compatible.
+* Adjusted document.write built-in delay exclusion to prevent false positives.
+* Adjusted MU Mode documentation links in the Script Manager to go to specific anchor link sections.
+* Fixed an issue where encoded data attribute values weren't being preserved correctly when converting an elements attribute string to an array.
+* Fixed a multisite issue where the root directory path was not determined correctly when using a custom content directory setup.
+* Deployed a secondary API that can be used when the client has issues communicating with our licensing server (usually due to firewalls).
+* Removed deprecated SVG duotone filter removal actions from global styles toggle and updated tooltip to reflect changes.
+* Translation updates.
+
 = 2.4.0 - 02.26.2025 =
-* Added new perfmatters_rucss_async_stylesheets filter and built-in settings for dashicons and animation stylesheets which were already excluded from used CSS.
-* Added new perfmatters_after_local_analytics action hook.
+* Added new perfmatters_rucss_async_stylesheets filter which allows you to async any stylesheet already excluded from used CSS.
+* Dashicons and Elementor animation stylesheets are now loaded via async for better performance when Removed Unused CSS is turned on.
 * Added additional logic to better handle stylesheets with media query attributes when including them in used CSS for increased performance. WooCommerce users may need to clear their used CSS if mobile-specific stylesheets are being loaded as they have been removed from our built-in exclusions.
-* Added new built-in stylesheet exclusion for Bricks post specific CSS.
+* Added new built-in stylesheet exclusion for Bricks post-specific CSS.
 * Added new Delay JS quick exclusion for WPBakery.
 * Added a REST API exception for SureCart.
 * Added additional compatibility styles to the Script Manager.
