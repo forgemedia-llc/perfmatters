@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
 Tested up to: 6.7.2
-Stable tag: 2.4.1
+Stable tag: 2.4.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,10 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.4.2 - 04.02.2025 =
+* Fixed an issue where mobile event handlers were sometimes preventing the delayed click from firing.
+* Translation updates.
 
 = 2.4.1 - 03.26.2025 =
 * Refactored delay JS inline script, removed pageshow event listener, and uglified final code, reducing the script size by over 15%.
