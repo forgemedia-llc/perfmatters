@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
-Tested up to: 6.7.2
-Stable tag: 2.4.2
+Tested up to: 6.8
+Stable tag: 2.4.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,12 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.4.3 - 04.15.2025 =
+* Added new preload options to control Speculative Loading mode and eagerness settings for sites running WordPress 6.8+.
+* Deprecated Instant Page option throughout the plugin for sites running WordPress 6.8+.
+* Added a REST API exception for Slider Revolution.
+* Updated delay JS quick exclusions for ShortPixel and Slider Revolution to be more compatible.
 
 = 2.4.2 - 04.02.2025 =
 * Fixed an issue where mobile event handlers were sometimes preventing the delayed click from firing.
