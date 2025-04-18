@@ -22,7 +22,7 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 * Defer and delay JavaScript, including third-party scripts.
 * Automatically remove unused CSS.
 * Minify JavaScript and CSS.
-* Preload resources, critical images, and prefetch links for quicker load times.
+* Preload resources, critical images, and prerender links for quicker load times.
 * Lazy load images and enable click-to-play thumbnails on videos.
 * Host Google Analytics and Google Fonts locally.
 * Change your WordPress login URL. 
