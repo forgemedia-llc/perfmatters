@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
-Tested up to: 6.8
-Stable tag: 2.4.3
+Tested up to: 6.8.1
+Stable tag: 2.4.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,19 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.4.4 - 05.08.2025 =
+* Added new Exclude Leading option for CSS background images.
+* Added new perfmatters_lazyload_parent_exclusions filter.
+* Added new perfmatters_css_background_selectors filter.
+* Added new speculative loading mode option to disable the feature entirely.
+* Refactored lazy element method to be more efficient when searching for multiple element selectors.
+* Reworked the perfmatters_critical_image_parent_exclusions and perfmatters_leading_image_parent_exclusions filters to no longer need to process the page HTML through DOMDocument for better stability, faster parsing, and 30% less code.
+* Fixed an issue with parent selector matching for fetch priority and lazy loading where only the first image tag would match if it was inside a nested container element.
+* Fixed an issue where the CSS Background class would get added to child elements as well if they also contained a matching selector.
+* Fixed a compatibility issue when using Perfmatters preloads alongside WP Rocket.
+* Fixed a spacing issue with input row checkboxes in the plugin UI.
+* Translation updates.
 
 = 2.4.3 - 04.15.2025 =
 * Added new preload options to control Speculative Loading mode and eagerness settings for sites running WordPress 6.8+.
