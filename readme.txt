@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
 Tested up to: 6.8.1
-Stable tag: 2.4.5
+Stable tag: 2.4.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,20 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.4.6 - 06.17.2025 =
+* Added new advanced preload option to enable Cloudflare Early Hints (BETA) for Perfmatters preloads along with controls to limit which file types will have early hint link headers sent.
+* Added new WP-CLI import-settings subcommand to import a settings configuration from an exported .json file.
+* Added new WP-CLI disable and enable subcommands to modify certain plugin options. Available options can be printed out with the new get-options subcommand.
+* Added new delay JS quick exclusion for SureCart.
+* Added additional logic to disable speculative loading on WooCommerce cart and checkout URLs.
+* Added additional logic to allow fallback deferral exclusions as part of an existing delay JS quick exclusion.
+* Added built-in exclusion for Gravity Forms to prevent optimization features from running on AJAX form requests.
+* Updated CSS parsing library to the latest version (8.8.0). Bug fixes and deprecations.
+* Adjusted placement of perfmatters_preloads filter which was running too early and causing some filter snippets to be ignored.
+* Increased default delay timeout from 10 to 15 seconds to improve compatibility.
+* Fixed an issue with certain parent selector matching functions where a child element selector tag would also be replaced if it had the exact same selector tag HTML as the matched parent tag.
+* Fixed multiple redundant calls to retrieve Script Manager settings row when loading the Script Manager UI.
 
 = 2.4.5 - 05.16.2025 =
 * Added some compatibility logic to fix an issue with specific caching plugins that were not working correctly with Perfmatters output buffer functions.
