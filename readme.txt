@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.0
-Tested up to: 6.8.1
-Stable tag: 2.4.6
+Tested up to: 6.8.2
+Stable tag: 2.4.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,17 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.4.7 - 07.15.2025 =
+* Added support to set the Perfmatters license key via wp-config.php using the PERFMATTERS_LICENSE_KEY constant.
+* Added new perfmatters_fetch_priority filter.
+* Added integration to send an early hint header for used CSS file when both features are enabled.
+* Added additional check for imagesrcset attribute when determining if an image should receive an early hint.
+* Added crossorigin and fetchpriority attributes to early hint headers.
+* Added additional parameters to excluded page builders array for Thrive Quiz Builder and Etch.
+* Added built-in stylesheet exclusions for Elementor and Astra local fonts.
+* Cleaned up leftover test file missed in previous update.
+* Translation updates.
 
 = 2.4.6 - 06.17.2025 =
 * Added new advanced preload option to enable Cloudflare Early Hints (BETA) for Perfmatters preloads along with controls to limit which file types will have early hint link headers sent.
