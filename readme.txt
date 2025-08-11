@@ -3,9 +3,9 @@ Contributors:
 Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
-Requires PHP: 7.0
+Requires PHP: 7.2
 Tested up to: 6.8.2
-Stable tag: 2.4.7
+Stable tag: 2.4.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,19 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.4.8 - 08.11.2025 =
+* Added built-in stylesheet exclusion for Bricks layer stylesheets.
+* Adjusted emoji_svg_url filter to only return false outside the admin dashboard.
+* Updated delay JS quick exclusion for Bricks to include splide.
+* Updated delay JS quick exclusion for CookieYes to be more compatible.
+* Updated early hint attribute check to include sizes and media attributes.
+* Updated CSS parsing library to the latest version (9.0.0). New features, deprecation removals and bug fixes.
+* Updated deprecated function in CSS class to use current method.
+* Updated minification library to the latest version (1.3.75).
+* Updated minimum PHP version requirement to 7.2.
+* Updated our staging site license key exception list with additional formats.
+* Translation updates.
 
 = 2.4.7 - 07.15.2025 =
 * Added support to set the Perfmatters license key via wp-config.php using the PERFMATTERS_LICENSE_KEY constant.
