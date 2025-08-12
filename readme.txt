@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.2
 Tested up to: 6.8.2
-Stable tag: 2.4.8
+Stable tag: 2.4.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,9 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.4.9 - 08.12.2025 =
+* Rolled back CSS parsing library one version (8.9.0) to fix a conflict with WooCommerce.
 
 = 2.4.8 - 08.11.2025 =
 * Added built-in stylesheet exclusion for Bricks layer stylesheets.
