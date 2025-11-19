@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.2
 Tested up to: 6.8.3
-Stable tag: 2.5.2
+Stable tag: 2.5.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,16 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.5.3 - 11.19.2025 =
+* Added new Code Snippets (BETA) feature, which is now the default view in the Code tab. You can now create and manage PHP, JS, CSS, and HTML code snippets from inside Perfmatters. We store and load code snippets using a flat-file method and directly integrate with all of our existing optimization options for the best performance.
+* Moved the existing header, body, and footer code boxes to Code > Global Scripts.
+* Made style adjustments throughout the plugin UI.
+* Added built-in CSS selector exclusion for GeneratePress mobile menu.
+* Added new get_file_path utility method for use in various functions that need to determine the local file path for an asset loading on the front end.
+* Fixed an issue where missing image dimensions were not getting applied correctly for sites inside a subdirectory.
+* Removed BETA tag from Cloudflare Early Hints option.
+* Updated EDD plugin updater class to version 1.9.4.
 
 = 2.5.2 - 10.23.2025 =
 * Added new perfmatters_rucss_inline_stylesheets filter which allows you to inline any stylesheet already excluded from used CSS.
@@ -199,6 +209,7 @@ Check out our [documentation](https://perfmatters.io/docs/) for more information
 
 = 2.3.6 - 11.21.2024 =
 * Fixed an issue where Delay JS wasn't running correctly in some cases.
+* Updated EDD plugin updater class to version 1.9.2.
 
 = 2.3.5 - 11.21.2024 =
 * Added new local Google Font option to Limit Subsets that are downloaded and included in the stylesheet.
