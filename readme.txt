@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.2
 Tested up to: 6.8.3
-Stable tag: 2.5.3
+Stable tag: 2.5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,13 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.5.4 - 11.20.2025 =
+* Moved code snippet storage location out of cache directory and into the uploads folder to prevent data loss in certain environments.
+* Fixed a code snippets compatibility issue with servers that don't support PHP OPcache..
+* Fixed an issue where the CodeMirror editor was not always initializing correctly when editing an individual code snippet.
+* Fixed an issue where the code type tag prefix was not updating when changing the code type while creating a new code snippet.
+* Fixed an issue in the error handling class where the exception handler was looping in certain instances and throwing an error.
 
 = 2.5.3 - 11.19.2025 =
 * Added new Code Snippets (BETA) feature, which is now the default view in the Code tab. You can now create and manage PHP, JS, CSS, and HTML code snippets from inside Perfmatters. We store and load code snippets using a flat-file method and directly integrate with all of our existing optimization options for the best performance.
