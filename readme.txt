@@ -38,7 +38,7 @@ Check out our [documentation](https://perfmatters.io/docs/) for more information
 
 = 2.5.4 - 11.20.2025 =
 * Moved code snippet storage location out of cache directory and into the uploads folder to prevent data loss in certain environments.
-* Fixed a code snippets compatibility issue with servers that don't support PHP OPcache..
+* Fixed a code snippets compatibility issue with servers that don't support PHP OPcache.
 * Fixed an issue where the CodeMirror editor was not always initializing correctly when editing an individual code snippet.
 * Fixed an issue where the code type tag prefix was not updating when changing the code type while creating a new code snippet.
 * Fixed an issue in the error handling class where the exception handler was looping in certain instances and throwing an error.
