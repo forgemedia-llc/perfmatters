@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.2
-Tested up to: 6.8.3
-Stable tag: 2.5.4
+Tested up to: 6.9
+Stable tag: 2.5.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,24 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.5.5 - 12.11.2025 =
+* Added new Code Settings options to Import and Export Perfmatters code snippets.
+* Added support to export individual snippets, a subset of snippets through a bulk action, or all stored snippets from the new Code Settings export button.
+* Added code snippets admin bar menu item that will show up if at least one snippet is present.
+* Added frontend footer and admin footer locations for CSS code snippets.
+* Added new PMMU_PLUGIN_DIR constant to allow for manipulation of the MU plugin file location for specific setups where the standard WPMU_PLUGIN_DIR may be altered.
+* Added a REST API exception for Mollie.
+* Added additional built-in CSS selector exclusions for Elementor's background slideshow.
+* Added support for relative path URLs found inside stylesheets printed inline with our perfmatters_rucss_inline_stylesheets filter.
+* Updated previous Separate Block Styles option which will now show up as a Block Style Behavior dropdown for sites running WordPress 6.9+.
+* Fixed an issue in the code snippets editor where lint markers were not always correctly displaying for HTML and CSS snippets.
+* Fixed an issue where the code snippet editor was pushing new lines off screen in some cases and not automatically scrolling to keep things in view.
+* Fixed an issue where HTML code snippets were not able to save a non-default location.
+* Fixed an issue with general Perfmatters admin notices not displaying correctly.
+* Fixed multiple duplicate ID warnings in the plugin UI.
+* Fixed multiple jQuery deprecation warnings in plugin UI JavaScript.
+* Translation updates.
 
 = 2.5.4 - 11.20.2025 =
 * Moved code snippet storage location out of cache directory and into the uploads folder to prevent data loss in certain environments.
