@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.2
 Tested up to: 6.9
-Stable tag: 2.5.5
+Stable tag: 2.5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,28 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.5.6 - 01.28.2026 =
+* Added new perfmatters_cdn_url filter along with new helper methods in the CDN class.
+* Added the ability to completely disable Perfmatters code features using the new PERFMATTERS_DISABLE_CODE constant.
+* Added confirmation message when turning on FastClick option.
+* Added logic to remove the previous stored author ID when a code snippet is imported.
+* Added host name to global settings and code snippet export files.
+* Added additional logic to add an auto value to lazy loaded images sizes attributes when needed.
+* Added separate used CSS generated files for different WooCommerce product types.
+* Added dynamic request check in heartbeat function to prevent a possible PHP error.
+* Updated lazy loading class to no longer add noscript tags by default for images and iframes to reduce HTML page size. The perfmatters_lazyload_noscript filter can still be used to turn that behavior back on.
+* Updated get_atts_array utility method to use regex instead of wp_kses_hair for better compatibility.
+* Reworked code snippet error handling class to work better with other exception handlers and existing error reporting.
+* Turned off CSSLint in the code snippet editor, as it is outdated and was leading to false positives.
+* Adjusted gutter column layout in the code snippet editor to be more consistent between different code types.
+* Adjusted code snippet priority field to allow both negative and zero input values.
+* Fixed an issue where CSS code snippets set to run in the footer were not having their conditions checked.
+* Fixed an issue where CSS code snippets were not always printing where expected based on the set location and priority.
+* Fixed an issue with certain code snippet input fields not being escaped properly in the UI leading to a broken layout in some cases.
+* Fixed an issue where YouTube iframes rendered with a preview thumbnail that had autoplay forced off in their query string would require a double click.
+* Fixed an issue where the referrerpolicy iframe attribute did not get applied to the generated iframe when using YouTube preview thumbnails.
+* Translation updates.
 
 = 2.5.5 - 12.11.2025 =
 * Added new Code Settings options to Import and Export Perfmatters code snippets.
