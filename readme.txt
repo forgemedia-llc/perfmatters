@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.2
 Tested up to: 6.9
-Stable tag: 2.5.6
+Stable tag: 2.5.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,11 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.5.7 - 02.02.2026 =
+* Fixed an issue where the auto size attribute value was being added to images with no specified dimensions which could cause the image to display incorrectly.
+* Fixed an issue where the attribute parser would ignore attribute values containing new line characters.
+* Fixed an issue with certain attribute characters being disallowed preventing the attribute from migrating to the final element tag.
 
 = 2.5.6 - 01.28.2026 =
 * Added new perfmatters_cdn_url filter along with new helper methods in the CDN class.
