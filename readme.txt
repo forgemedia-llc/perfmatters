@@ -19,6 +19,7 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 
 * Easy quick toggle options to turn off resources that shouldn't be loading. 
 * Disable scripts and plugins on a per post/page or sitewide basis with the Script Manager. 
+* Add and optimize code snippets (PHP, CSS, JS, and HTML), only load where needed.
 * Defer and delay JavaScript, including third-party scripts.
 * Automatically remove unused CSS.
 * Minify JavaScript and CSS.
