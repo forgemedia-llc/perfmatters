@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.2
-Tested up to: 6.9
-Stable tag: 2.5.7
+Tested up to: 6.9.1
+Stable tag: 2.5.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,6 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 
 * Easy quick toggle options to turn off resources that shouldn't be loading. 
 * Disable scripts and plugins on a per post/page or sitewide basis with the Script Manager. 
-* Add and optimize code snippets (PHP, CSS, JS, and HTML), only load where needed.
 * Defer and delay JavaScript, including third-party scripts.
 * Automatically remove unused CSS.
 * Minify JavaScript and CSS.
@@ -36,6 +35,25 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.5.8 - 02.26.2026 =
+* Added new perfmatters_lazyload_data_src filter.
+* Added nav selector support for functions that target elements inside parent containers.
+* Added additional built-in CSS selector exclusion for Kadence active state class.
+* Added is_admin check to disable dashicons function for certain edge cases in the admin UI.
+* Added logic to prevent certain redundant options from showing up in the UI when parent disables are already toggled on.
+* Added new General, License and Analytics classes to separate out specific functionality.
+* Fixed an issue with certain attribute pair formats not being recognized when converting an element's attribute string to an array.
+* Fixed an issue where delaying certain duplicate scripts would cause a JavaScript error and prevent remaining delayed assets from loading in.
+* Fixed a code snippet issue where targeting the front or blog page of the site by page ID would not match correctly.
+* Fixed multiple plugin UI HTML warnings for incorrect label target IDs.
+* Made some lazy loading adjustments to let WordPress still add the auto size attribute value when necessary before the Perfmatters output buffer runs.
+* Made changes to the way we handle images excluded from lazy loading to ensure they don't have a loading attribute applied.
+* Removed previous functions.php file, refactored and migrated the of contents to new and existing classes.
+* Refactored Utilities class, added a few functions from previous combined file, combined regex passes for clean_html, added memoization to necessary functions to prevent multiple runs.
+* Minor update to disable self pingbacks function for better compatibility.
+* Removed BETA tag from Code Snippets feature.
+* Translation updates.
 
 = 2.5.7 - 02.02.2026 =
 * Fixed an issue where the auto size attribute value was being added to images with no specified dimensions which could cause the image to display incorrectly.
