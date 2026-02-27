@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.2
 Tested up to: 6.9.1
-Stable tag: 2.5.8
+Stable tag: 2.5.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,9 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.5.9 - 02.27.2026 =
+* Fixed a type cast issue in wp_headers filter that was resulting in a PHP error in cases where the headers were already being filtered and returning null.
 
 = 2.5.8 - 02.26.2026 =
 * Added new perfmatters_lazyload_data_src filter.
