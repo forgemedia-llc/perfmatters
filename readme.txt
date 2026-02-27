@@ -49,7 +49,7 @@ Check out our [documentation](https://perfmatters.io/docs/) for more information
 * Fixed multiple plugin UI HTML warnings for incorrect label target IDs.
 * Made some lazy loading adjustments to let WordPress still add the auto size attribute value when necessary before the Perfmatters output buffer runs.
 * Made changes to the way we handle images excluded from lazy loading to ensure they don't have a loading attribute applied.
-* Removed previous functions.php file, refactored and migrated the of contents to new and existing classes.
+* Removed previous functions.php file, refactored and migrated the contents to new and existing classes.
 * Refactored Utilities class, added a few functions from previous combined file, combined regex passes for clean_html, added memoization to necessary functions to prevent multiple runs.
 * Minor update to disable self pingbacks function for better compatibility.
 * Removed BETA tag from Code Snippets feature.
