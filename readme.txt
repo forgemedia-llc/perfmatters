@@ -3,7 +3,7 @@ Contributors:
 Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
-Requires PHP: 7.2
+Requires PHP: 8.1
 Tested up to: 6.9.4
 Stable tag: 2.6.0
 License: GPLv2 or later
@@ -38,6 +38,7 @@ Check out our [documentation](https://perfmatters.io/docs/) for more information
 == Changelog ==
 
 = 2.6.0 - 03.25.2026 =
+* Increased minimum required PHP version to 8.1 to allow for library updates and support for future codebase performance improvements.
 * Added new perfmatters_rucss_logged_in filter.
 * Added PHP Scoper to our plugin development workflow to be able to silo specific third-party libraries to prevent conflicts with other plugins.
 * Updated PHP CSS Parser library to 9.3.0.
