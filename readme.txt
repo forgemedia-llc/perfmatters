@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 7.2
-Tested up to: 6.9.1
-Stable tag: 2.5.9
+Tested up to: 6.9.4
+Stable tag: 2.6.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,8 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 = Features =
 
 * Easy quick toggle options to turn off resources that shouldn't be loading. 
-* Disable scripts and plugins on a per post/page or sitewide basis with the Script Manager. 
+* Disable scripts and plugins on a per post/page or sitewide basis with the Script Manager.
+* Add and optimize code snippets (PHP, CSS, JS, and HTML), only load where needed.
 * Defer and delay JavaScript, including third-party scripts.
 * Automatically remove unused CSS.
 * Minify JavaScript and CSS.
@@ -35,6 +36,27 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.6.0 - 03.25.2026 =
+* Added new perfmatters_rucss_logged_in filter.
+* Added PHP Scoper to our plugin development workflow to be able to silo specific third-party libraries to prevent conflicts with other plugins.
+* Updated PHP CSS Parser library to 9.3.0.
+* Added additional logic to used CSS generation to better deal with layer elements that are declared without a content block.
+* Removed built-in stylesheet exclusion for Bricks' layer files. We recommend clearing used CSS after updating.
+* Added new CSS helper method to rewrite relative URLs in stylesheets that will be printed inline using regex only to prevent having to pass them through the parser.
+* Updated code snippets author column to use the user's display name instead of nice name to match the single snippet layout.
+* Updated disable RSS feeds function to return a 410 header instead of a 301 when requesting a feed URL.
+* Made some adjustments to clean_html regex pattern to avoid potential backtracking which could end up hitting a PCRE limit in some cases.
+* Made plugin UI styles adjustments in preparation for WordPress 7.
+* Made improvements to visual transitions during hard reloads in the plugin UI.
+* Made some changes to plugin UI nav JS to improve compatibility when wrapper elements are added in the HTML from another source.
+* Fixed an issue that was causing certain attribute values to conflict with the HTML parent selector matching regex.
+* Fixed an issue where specific WooCommerce product types were not getting the built-in product exclusion selector added to generated used CSS.
+* Fixed an issue where HTML snippets with a condition mismatch were causing the original content to return blank.
+* Fixed an issue where code snippet input preserved in the form after a failed save request was not properly unslashed.
+* Fixed an issue where the code snippet code type was no longer visible and the selected value was lost after a failed save request.
+* Fixed a possible PHP 8.2+ deprecation warning that could occur in specific server environments during PMCS initialization.
+* Code snippet security updates to form submission handling.
 
 = 2.5.9 - 02.27.2026 =
 * Fixed a type cast issue in wp_headers filter that was resulting in a PHP error in cases where the headers were already being filtered and returning null.
