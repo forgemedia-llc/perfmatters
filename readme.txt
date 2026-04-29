@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 8.1
 Tested up to: 6.9.4
-Stable tag: 2.6.1
+Stable tag: 2.6.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,20 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.6.2 - 04.29.2026 =
+* Added support to automatically optimize and lazy load Elementor Atomic YouTube elements and legacy video widgets when Perfmatters iframe lazy loading is turned on. YouTube preview thumbnails are also supported, as well as Elementor image overlays if set for the video.
+* Added request-level caching to excluded and forced lazy loading attribute arrays to prevent unnecessary calls.
+* Added multiple stripos and str_contains (PHP 8) checks in lazy loading image and iframe functions to prevent expensive regex scans if tags don't exist on the page.
+* Added new should_skip_request method in core LazyLoad class with request-level caching to prevent duplicate checks for WooCommerce pages and post-specific meta options.
+* Added support to various General class functions to respect ?perfmattersoff.
+* Added filters back to turn off WordPress' lazy loading and auto sizing styles when Perfmatters lazy loading is turned on.
+* Added built-in JS and CSS exclusions for Woocommerce's dynamically added woocommerce-js body class.
+* Refactored LazyLoad class into multiple subclasses for better maintainability.
+* Removed duplicate list normalization step before replacement across LazyLoad classes to reduce loop overhead.
+* Renamed previous Images class to ImageDimensions to make room for new Images lazy loading subclass.
+* Fixed an issue where certain lazy loaded tags were getting replaced globally in the document instead of only at the specific tag match instance.
+* Translation updates.
 
 = 2.6.1 - 04.10.2026 =
 * Made additional plugin UI styles adjustments in preparation for WordPress 7.
