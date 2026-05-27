@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 8.1
-Tested up to: 6.9.4
-Stable tag: 2.6.2
+Tested up to: 7.0
+Stable tag: 2.6.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,25 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.6.3 - 05.27.2026 =
+* Added new Shortcode option when choosing a location for HTML code snippets.
+* Added new code option to select the Editor Theme along with the ability to upload a custom CodeMirror 5 theme stylesheet.
+* Added base64 encoding to exported code snippets to prevent import requests from being blocked by certain firewalls. Previously exported code snippet JSON files can still be imported.
+* Added new Location helper class to store shared logic to parse and match string based location input fields throughout the plugin.
+* Added the ability to use the 'front' keyword in location input fields to always match the front page of the site.
+* Added additional lazy loading compatibility styles specifically for iframes placed inside Elementor text and HTML elements.
+* Adjusted Script Manager Global View rows to always display multiple post IDs in ascending order.
+* Multiple styling adjustments and fixes throughout the plugin UI.
+* Made some changes to how certain UI elements trigger a forced reload in response to specific actions to make things less jarring.
+* Fixed an issue where our compatibility styles for a lazy loaded video inside a responsive embed could break the layout if the core block library stylesheet was disabled. 
+* Fixed an issue where code type selection for individual code snippets was still visible even after saving.
+* Fixed an issue where the next page buttons in the snippets table was still showing as active even when viewing the last page.
+* Fixed an issue where stylesheets with protocol-relative URLs were not getting parsed for used CSS.
+* Disabled lint markers for HTML code snippets, as they do not currently work for combined HTML and inline PHP code.
+* Removed unnecessary instances of perfmatters-lazy-youtube class from lazy loading inline styles. All lazy loading video features are now using a shared perfmatters-lazy-video class.
+* Removed unnecessary development directories from plugin files.
+* Translation updates.
 
 = 2.6.2 - 04.29.2026 =
 * Added support to automatically optimize and lazy load Elementor Atomic YouTube elements and legacy video widgets when Perfmatters iframe lazy loading is turned on. YouTube preview thumbnails are also supported, as well as Elementor image overlays if set for the video.
