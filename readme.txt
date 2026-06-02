@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 8.1
 Tested up to: 7.0
-Stable tag: 2.6.3
+Stable tag: 2.6.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,10 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.6.4 - 06.01.2026 = 
+* Security updates to improve PMCS admin output sanitization and query handling across snippet editor and list views.
+* Translation updates.
 
 = 2.6.3 - 05.27.2026 =
 * Added new Shortcode option when choosing a location for HTML code snippets.
