@@ -37,7 +37,7 @@ Check out our [documentation](https://perfmatters.io/docs/) for more information
 
 == Changelog ==
 
-= 2.6.4 - 06.01.2026 = 
+= 2.6.4 - 06.01.2026 =
 * Security updates to improve PMCS admin output sanitization and query handling across snippet editor and list views.
 * Translation updates.
 
