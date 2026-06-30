@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 8.1
 Tested up to: 7.0
-Stable tag: 2.6.4
+Stable tag: 2.6.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,20 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.6.5 - 06.30.2026 =
+* Added new perfmatters_rucss_delay_stylesheets filter which allows you to delay a specific stylesheet already excluded from used CSS.
+* Added new load behavior option to delay CSS code snippets using the file print method.
+* Added new code snippet URL-based conditions for path contains, path equals and path regex.
+* Added additional support to code snippet search to allow the search value to match on the code input itself.
+* Added default sort order controls to code snippet screen options.
+* Made a change to allow an image tag with a missing src attribute to still be able to lazy load if it has a valid srcset attribute.
+* Adjusted main code menu behavior to return to return to the base code view if selected while viewing a single code snippet.
+* Fixed utility attribute encoding so certain characters are preserved instead of being converted to HTML entities.
+* Fixed a possible JavaScript conflict with minimal analytics declaring variables in the global scope. The script is now wrapped in an IIFE for compatibility.
+* Security update to improve escaping of Code Snippets list table admin links built from the current request URL.
+* Security updates to add domain verification and content type validation to local Google fonts feature when downloading remote files.
+* Translation updates.
 
 = 2.6.4 - 06.01.2026 =
 * Security updates to improve PMCS admin output sanitization and query handling across snippet editor and list views.
