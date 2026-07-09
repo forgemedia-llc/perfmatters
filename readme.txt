@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 8.1
-Tested up to: 7.0
-Stable tag: 2.6.5
+Tested up to: 7.0.1
+Stable tag: 2.6.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,13 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.6.6 - 07.09.2026 =
+* Improved code snippet docblock parsing to use UTF-8 aware regex when reading snippet metadata.
+* Improved reliability of snippet metadata parsing across different server environments.
+* Fixed an issue with multiline code snippet descriptions not saving properly. 
+* Fixed an issue where the database optimization process button spinner was getting stuck without reloading the page.
+* Translation updates.
 
 = 2.6.5 - 06.30.2026 =
 * Added new perfmatters_rucss_delay_stylesheets filter which allows you to delay a specific stylesheet already excluded from used CSS.
