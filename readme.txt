@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 8.1
-Tested up to: 7.0.1
-Stable tag: 2.6.6
+Tested up to: 7.0.3
+Stable tag: 2.6.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,16 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.6.7 - 08.06.2026 =
+* Removed the Script Manager MU Mode dependency on pluggable.php to avoid conflicts with SMTP and other plugins that override core pluggable functions.
+* Fixed an issue where Script Manager MU Mode could permanently deactivate plugins when another plugin (such as Freemius) wrote a filtered active_plugins list back to the database.
+* Fixed an issue where Script Manager MU Mode could resolve some custom post type URLs to the wrong post ID.
+* Fixed an issue where Fetch Priority would always use the first matched priority value when the same selector had separate device rules.
+* Added ABSPATH checks to plugin include files where needed.
+* Added capability checks to Used CSS and Minify clear actions, and sanitized the Used CSS file type parameter.
+* Hardened license form request verification.
+* Improved license and update API request handling to reduce how often sites contact the Perfmatters server, including longer update check caching, cached license status checks, and a staggered retry delay after failed update requests.
 
 = 2.6.6 - 07.09.2026 =
 * Improved code snippet docblock parsing to use UTF-8 aware regex when reading snippet metadata.
