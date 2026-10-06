@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 8.1
-Tested up to: 7.1
-Stable tag: 2.6.8
+Tested up to: 7.1.2
+Stable tag: 2.6.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,33 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.6.9 - 10.06.2026 =
+* Added new perfmatters_rucss_per_id_post_types filter which allows for unique used CSS files per post ID for provided post types.
+* Adjusted Remove Unused CSS to generate separate used CSS files per taxonomy instead of one shared tax.used.css file.
+* Updated PHP-CSS-Parser to 9.5.0, removing the thecodingmachine/safe dependency and improving @layer statement support.
+* Added a REST API exception for GenerateBlocks Pro.
+* Added built-in Remove Unused CSS exclusions for Elementor's new local and global per-document stylesheets.
+* Updated delay JS quick exclusions for Elementor to include hooks.min.js and i18n.min.js to fix a dependency error.
+* Updated JS optimize script tag regex to avoid hitting PCRE backtracking limits on pages with very large inline scripts.
+* Added Brizy editor request parameters to the excluded page builders array.
+* Added logic to prevent Disable WooCommerce Scripts option from running inside page builders.
+* Replaced wp_admin_notice() usage in code snippets with standard admin notice markup for better compatibility with older WordPress versions.
+* Fixed incorrect and missing text domains, and added translators comments for placeholder strings where needed.
+* Fixed an issue where videos using nested source tags without a src attribute on the video element were not lazy loaded, including video tags with no attributes.
+* Fixed an accessibility issue with lazy video preview thumbnails where the placeholder could not be focused or activated from the keyboard and was missing a proper accessible name.
+* Improved picture tag lazy loading to use a more efficient source attribute migration technique and match forced attributes across the full picture markup.
+* Added a sanitization callback for network settings on save.
+* Improved prepared SQL handling for code snippet post queries and database optimization table scans.
+* Security updates to improve escaping across the admin UI, including settings helpers, Script Manager, code snippets, license, support, and related screens.
+* Fixed a compatibility issue with WP Captcha PRO that could return a blank page when opening the Script Manager.
+* Fixed an issue where Delay JavaScript could skip inline scripts that contained HTML comments.
+* Fixed an issue where Script Manager MU Mode could save incomplete rewrite rules when WordPress rebuilt them on a request with plugins disabled, which could 404 those routes until the next full flush.
+* Fixed an issue where Script Manager MU Mode treated the post query argument as the current URL, so a front-end request could run another URL's plugin rules while WordPress served the original permalink.
+* Fixed Script Manager MU Mode Current URL plugin rules so front page rules stay off search, feeds, and other views that share that path. The rules will also now apply correctly on private posts, pages, and the WooCommerce shop page.
+* Fixed a fatal error in Script Manager MU Mode when another mu-plugin read active_plugins before WordPress had finished loading.
+* Fixed an issue where Script Manager MU Mode could disable the wrong plugin whose folder name started with the folder of the plugin that was meant to be disabled.
+* Fixed a fatal error when the Login URL disabled behavior is set to the 404 template and a logged-out visitor requests customize.php before the theme has loaded. Admin requests such as wp-admin and customize.php now fall back to the disabled message, since those requests never load the front-end.
 
 = 2.6.8 - 09.09.2026 =
 * Added new Inline Excluded Stylesheets advanced option to automatically inline stylesheets excluded from Remove Unused CSS.
