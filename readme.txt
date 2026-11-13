@@ -4,8 +4,8 @@ Donate link: https://perfmatters.io
 Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 8.1
-Tested up to: 7.1.2
-Stable tag: 2.6.9
+Tested up to: 7.1
+Stable tag: 2.7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,21 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.7.0 - 11.12.2026 =
+* Added new Cache (BETA) tab with disk page cache, cache warmer, and Cloudflare edge cache. Page cache stores optimized HTML on disk with optional mobile separation, expiry, and cache rules for excluded URLs, bypass cookies, always-purge URLs, and query strings. The warmer can crawl posts, pages, and other public sources on a schedule or on demand. Cloudflare edge cache syncs Cache Rules via API token, with zone controls and edge TTL. Disk page cache is single-site only during beta and is automatically disabled on hosts that already provide page caching. 20+ new filter and action hooks added to the documentation. All Cache options remain off by default.
+* Prefixed the bundled wp-background-processing library to avoid class conflicts that could slow down admin requests.
+* Fixed code snippet PHP validation rejecting snippets that start with a namespace or declare() statement.
+* Fixed code snippet recovery so a compile error in a snippet deactivates that snippet instead of leaving it active.
+* Fixed an issue where Fetch Priority could match and rewrite tags inside inline script and noscript content.
+* Fixed an issue where Script Manager MU Mode did not apply Current URL plugin rules on paginated WooCommerce shop URLs.
+* Fixed an issue where Script Manager MU Mode disabled no plugins on sites using plain permalinks.
+* Fixed an issue where Remove Unused CSS could delay, async, or remove stylesheets even when the used CSS file could not be written to disk.
+* Added an admin warning notice when Remove Unused CSS fails to write the used CSS file.
+* Fixed an uncaught Minify IOException when Local Google Fonts could not write to the fonts cache directory, which could abort HTML post-processing for the request.
+* Fixed an uncaught Minify IOException when Minify CSS/JS could not write to the minify cache directory, which could abort HTML post-processing for the request.
+* Fixed an uncaught Minify IOException when a code snippet JS/CSS file could not be minified on save, falling back to the non-minified file instead.
+* Translation updates.
 
 = 2.6.9 - 10.06.2026 =
 * Added new perfmatters_rucss_per_id_post_types filter which allows for unique used CSS files per post ID for provided post types.
