@@ -5,7 +5,7 @@ Tags: perfmatters
 Requires at least: 5.5
 Requires PHP: 8.1
 Tested up to: 7.1
-Stable tag: 2.7.0
+Stable tag: 2.7.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,23 @@ Perfmatters is a lightweight performance plugin developed to speed up your WordP
 Check out our [documentation](https://perfmatters.io/docs/) for more information on how to use Perfmatters.
 
 == Changelog ==
+
+= 2.7.1 - 11.19.2026 =
+* Improved the cache warmer user agent to use a plain Perfmatters/Warmer string (with a mobile token for separate mobile cache) instead of spoofed browser user agents, which could return Cloudflare 520 errors on hosts such as SiteGround when the warmer fell back to the public URL.
+* Added new perfmatters_cache_warmer_user_agent filter to override the warmer user agent.
+* Added new perfmatters_cache_browser_ttl filter to set browser Cache-Control max-age on cached HTML in seconds (default empty = no-cache, must-revalidate). Save cache settings after changing so page-config and .htaccess update.
+* Cache settings now detect a stale page-config (including filter changes) and prompts to reinstall cache files.
+* Swapped the settings subnav active and inactive colors to match the main Perfmatters menu behavior.
+* Database and cache warmer Scan Now buttons now wait to show the completed message until the result counts finish printing.
+* Replaced the Cloudflare Zone ID text field with a Zone setting (Auto or Manual Zone ID). Auto-detect is the default. Choosing Manual Zone ID reveals the Zone ID input field when needed.
+* Saving a change to the Cloudflare Zone ID now correctly reloads the settings screen for necessary updates.
+* Cloudflare cache rules no longer re-force the wordpress_logged_in cookie bypass after perfmatters_cache_bypass_cookies runs, so the default logged-in bypass can be removed via the filter when needed. Sync rules after changing the filter.
+* Fixed Cloudflare single-URL purges (publish, update, clear URL) not invalidating edge HTML because cache rules matched GET/HEAD only. Rules now also match PURGE.
+* Fixed Cloudflare cache rules sync on a shared zone (apex + subdomain) deleting the other site's rules. Sync now only removes this host's rules.
+* Cloudflare cache rules now attempt to update automatically once in wp-admin on a rule version change.
+* Updated the Perfmatters cache HTML comment to use the site's local timezone with a UTC offset.
+* Renamed the Cloudflare status card success state from Ready to Connected.
+* Translation updates.
 
 = 2.7.0 - 11.12.2026 =
 * Added new Cache (BETA) tab with disk page cache, cache warmer, and Cloudflare edge cache. Page cache stores optimized HTML on disk with optional mobile separation, expiry, and cache rules for excluded URLs, bypass cookies, always-purge URLs, and query strings. The warmer can crawl posts, pages, and other public sources on a schedule or on demand. Cloudflare edge cache syncs Cache Rules via API token, with zone controls and edge TTL. Disk page cache is single-site only during beta and is automatically disabled on hosts that already provide page caching. 20+ new filter and action hooks added to the documentation. All Cache options remain off by default.
